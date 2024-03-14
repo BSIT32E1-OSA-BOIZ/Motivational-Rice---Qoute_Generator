@@ -1,22 +1,61 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+    background-color: #eacf83;
 }
+
+#quote-container {
+    margin-top: 20vh;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 1px 0px 14px 2px rgba(0,0,0,0.53);
+    -webkit-box-shadow: 1px 0px 14px 2px rgba(0,0,0,0.53);
+    -moz-box-shadow: 1px 0px 14px 2px rgba(0,0,0,0.53);
+}
+
+#quote-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#author {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+#new-quote {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    #new-quote:hover {
+        background-color: #0056b3;
+    }
