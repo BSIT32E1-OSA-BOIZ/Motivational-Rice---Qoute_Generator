@@ -2,10 +2,10 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+@* <div class="text-center">
     <h1 class="display-4">Welcome <span>Qoute Generator</span></h1>
     @*     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
-</div>
+@* </div>
 
 <div id="quote-container">
     <p id="quote-text">"Example Quote"</p>
@@ -13,4 +13,147 @@
 </div>
 <button id="new-quote">New Quote</button>
 
-<script src="script.js"></script>
+<script src="script.js"></script> *@ 
+
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+	<!--welcome-hero start -->
+	<section id="home" class="welcome-hero">
+
+
+
+		<div class="container">
+			<div class="welcome-hero-txt">
+				<h2 class="qoute-text">"Believe you can and you're halfway there."</h2>
+				<p class="author">
+					- Theodore Roosevelt
+				</p>
+				<button class="welcome-btn" onclick="window.location.href='#'">Generate New Qoute</button>
+			</div>
+		</div>
+
+
+	</section><!--/.welcome-hero-->
+	<!--welcome-hero end -->
+	<!--service start -->
+	<section id="service" class="service">
+		<div class="container">
+			<div class="service-content">
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="single-service-item">
+							<div class="single-service-icon">
+								@* <i class="flaticon-car"></i> *@
+							</div>
+							<h2><a href="#">Inspiration</a></h2>
+							<p>
+								Motivate individuals to believe in themselves and their capabilities.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-service-item">
+							<div class="single-service-icon">
+								@* <i class="flaticon-Women-Power"></i> *@
+							</div>
+							<h2><a href="#">Empowerment</a></h2>
+							<p>
+								Encourage individuals to take action towards their goals with confidence.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-service-item">
+							<div class="single-service-icon">
+								@* <i class="flaticon-car-1"></i> *@
+							</div>
+							<h2><a href="#">Goal Achievement</a></h2>
+							<p>
+								Encourage ambitious goal-setting and persistent pursuit.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.container-->
+
+	</section><!--/.service-->
+	<!--service end-->
+	<!-- clients-say strat -->
+	<section id="clients-say" class="clients-say">
+		<div class="container">
+			<div class="section-header">
+				<h2>what our Authors say</h2>
+			</div><!--/.section-header-->
+			<div class="row">
+				<div class="owl-carousel testimonial-carousel">
+
+					<div class="col-sm-3 col-xs-12">
+						<div class="single-testimonial-box">
+							<div class="testimonial-description">
+								<div class="testimonial-info">
+									<div class="testimonial-img">
+										<img src="Images/clients/T.Roosevelt.jpg" alt="image of Authors " />
+									</div><!--/.testimonial-img-->
+								</div><!--/.testimonial-info-->
+								<div class="testimonial-comment">
+									<p>
+										"Believe you can and you're halfway there."
+									</p>
+								</div><!--/.testimonial-comment-->
+								<div class="testimonial-person">
+									<h2><a href="#"> Theodore Roosevelt</a></h2>
+									<h4>New york</h4>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-description-->
+						</div><!--/.single-testimonial-box-->
+					</div><!--/.col-->
+
+					<div class="col-sm-3 col-xs-12">
+						<div class="single-testimonial-box">
+							<div class="testimonial-description">
+								<div class="testimonial-info">
+									<div class="testimonial-img">
+										<img src="Images/clients/c1.png" alt="image of Authors " />
+									</div><!--/.testimonial-img-->
+								</div><!--/.testimonial-info-->
+								<div class="testimonial-comment">
+									<p>
+										"Believe you can and you're halfway there."
+									</p>
+								</div><!--/.testimonial-comment-->
+								<div class="testimonial-person">
+									<h2><a href="#"> Theodore Roosevelt</a></h2>
+									<h4>New york</h4>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-description-->
+						</div><!--/.single-testimonial-box-->
+					</div><!--/.col-->
+
+
+				</div><!--/.testimonial-carousel-->
+			</div><!--/.row-->
+		</div><!--/.container-->
+
+	</section><!--/.clients-say-->
+
+
+	<script>
+		const quotes = [
+			{ text: "Be yourself; everyone else is already taken.", author: "Oscar Wilde" },
+			{ text: "So many books, so little time.", author: "Frank Zappa" },
+			{ text: "A room without books is like a body without a soul.", author: "Marcus Tullius Cicero" },
+			// Add more quotes as desired
+		];
+
+		document.querySelector('.welcome-btn').addEventListener('click', () => {
+			const randomIndex = Math.floor(Math.random() * quotes.length);
+			const quote = quotes[randomIndex];
+			document.querySelector('.quote-text').textContent = `"${quote.text}"`;
+			document.querySelector('.author').textContent = `- ${quote.author}`;
+		});
+
+	</script>
+
+	</body>

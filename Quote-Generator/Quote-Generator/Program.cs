@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Quote_Generator.Data;
+
 namespace Quote_Generator
 {
     public class Program
@@ -8,6 +11,9 @@ namespace Quote_Generator
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddRazorPages();
+            builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(
+               builder.Configuration.GetConnectionString("localDb")));
 
             var app = builder.Build();
 
