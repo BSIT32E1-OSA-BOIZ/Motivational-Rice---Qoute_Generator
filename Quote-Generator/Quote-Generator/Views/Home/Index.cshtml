@@ -26,9 +26,9 @@
 
 		<div class="container">
 			<div class="welcome-hero-txt">
-				<h2 class="qoute-text">"Believe you can and you're halfway there."</h2>
+				<h2 class="qoute-text"></h2>
 				<p class="author">
-					- Theodore Roosevelt
+					
 				</p>
 				<button class="welcome-btn" onclick="window.location.href='#'">Generate New Qoute</button>
 			</div>
@@ -138,22 +138,6 @@
 
 	</section><!--/.clients-say-->
 
-
-	<script>
-		const quotes = [
-			{ text: "Be yourself; everyone else is already taken.", author: "Oscar Wilde" },
-			{ text: "So many books, so little time.", author: "Frank Zappa" },
-			{ text: "A room without books is like a body without a soul.", author: "Marcus Tullius Cicero" },
-			// Add more quotes as desired
-		];
-
-		document.querySelector('.welcome-btn').addEventListener('click', () => {
-			const randomIndex = Math.floor(Math.random() * quotes.length);
-			const quote = quotes[randomIndex];
-			document.querySelector('.quote-text').textContent = `"${quote.text}"`;
-			document.querySelector('.author').textContent = `- ${quote.author}`;
-		});
-
-	</script>
+	<script src="js/generate.js"></script>
 
 	</body>
