@@ -13,7 +13,7 @@ namespace Quote_Generator
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(
-               builder.Configuration.GetConnectionString("localDb")));
+            builder.Configuration.GetConnectionString("localDb")));
 
             var app = builder.Build();
 
